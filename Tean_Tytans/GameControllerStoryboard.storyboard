@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zWE-GQ-RWd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+    </dependencies>
+    <scenes>
+        <!--Game Controller View Controller - GameController-->
+        <scene sceneID="4gN-TZ-Scd">
+            <objects>
+                <viewController title="GameController" id="zWE-GQ-RWd" customClass="TTGameControllerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NlV-PM-qD7"/>
+                        <viewControllerLayoutGuide type="bottom" id="boR-yA-BWC"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qhb-3F-0Dg">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqf-TH-H2r" userLabel="Button -arrowLeft">
+                                <rect key="frame" x="0.0" y="0.0" width="91" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="arrowLeft.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="arrowLeftSelected.png"/>
+                                <connections>
+                                    <action selector="arrowLeftPressed:" destination="zWE-GQ-RWd" eventType="touchDown" id="KOX-eN-Mye"/>
+                                    <action selector="arrowLeftRelease:" destination="zWE-GQ-RWd" eventType="touchUpInside" id="Gf3-eg-zlO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITc-05-N8h" userLabel="Button -arrowRight">
+                                <rect key="frame" x="477" y="0.0" width="91" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="arrowRight.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="arrowRightSelected.png"/>
+                                <connections>
+                                    <action selector="arrowRightPressed:" destination="zWE-GQ-RWd" eventType="touchDown" id="Guq-Sp-enY"/>
+                                    <action selector="arrowRightRelease:" destination="zWE-GQ-RWd" eventType="touchUpInside" id="ugo-qq-KW8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5q-bI-d0U" userLabel="Button - action">
+                                <rect key="frame" x="91" y="0.0" width="386" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.49644953749999998" blue="0.044102688869999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionAttackTapped:" destination="zWE-GQ-RWd" eventType="touchDown" id="JGp-5J-J7V"/>
+                                    <outletCollection property="gestureRecognizers" destination="M80-xb-3MA" appends="YES" id="wby-Ma-Bwh"/>
+                                    <outletCollection property="gestureRecognizers" destination="JZu-ih-jtM" appends="YES" id="vve-Gb-D2f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yHr-eT-Lcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="M80-xb-3MA">
+                    <connections>
+                        <action selector="actionSpecialRotate:" destination="zWE-GQ-RWd" id="UWJ-Gu-hrl"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="JZu-ih-jtM">
+                    <connections>
+                        <action selector="actionGrabPinch:" destination="zWE-GQ-RWd" id="Za5-JM-a0Z"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="253" y="99"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowLeft.png" width="33.746482849121094" height="27.747108459472656"/>
+        <image name="arrowLeftSelected.png" width="24" height="24"/>
+        <image name="arrowRight.png" width="33.746482849121094" height="27.747108459472656"/>
+        <image name="arrowRightSelected.png" width="24" height="24"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
