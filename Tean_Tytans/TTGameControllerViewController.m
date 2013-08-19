@@ -13,6 +13,11 @@
 @end
 
 @implementation TTGameControllerViewController
++ (TTGameControllerViewController *)gameControllerCreate {
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"GameControllerStoryboard"
+														 bundle:nil];
+	return [storyboard instantiateViewControllerWithIdentifier:@"GameControllerID"];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,11 +34,7 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - button IBactions
 - (IBAction)arrowLeftPressed:(id)sender {
 	DLog(@"Arrow left has been pressed");
 }
@@ -41,7 +42,7 @@
 	DLog(@"Arrow Left has been released");
 }
 - (IBAction)arrowRightPressed:(id)sender {
-	DLog(@"arrow Right has been released")
+	DLog(@"arrow Right has been pressed")
 }
 - (IBAction)arrowRightRelease:(id)sender {
 	DLog(@"arrow right has been released");

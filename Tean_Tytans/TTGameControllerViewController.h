@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TTGameControllerViewController : UIViewController
-
++ (TTGameControllerViewController *)gameControllerCreate;
 @end

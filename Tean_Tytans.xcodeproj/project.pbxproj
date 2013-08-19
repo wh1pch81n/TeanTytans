@@ -26,6 +26,8 @@
 		7F0CD06617C1BB9700C31BC8 /* TTGameControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */; };
 		7F0CD06917C1BBC100C31BC8 /* TTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */; };
 		7F600C3717C1C95E001C1AD6 /* TeenTitansTogether.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F600C3617C1C95E001C1AD6 /* TeenTitansTogether.png */; };
+		7FA99D1C17C1CCA5003AB865 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD05117C1B26600C31BC8 /* MainStoryboard.storyboard */; };
+		7FA99D1E17C1CCAF003AB865 /* GameControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD04F17C1B23300C31BC8 /* GameControllerStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,6 +276,8 @@
 				7F0CD06217C1B78C00C31BC8 /* arrowRight.png in Resources */,
 				7F0CD02B17C1B0F300C31BC8 /* InfoPlist.strings in Resources */,
 				7F0CD06117C1B78C00C31BC8 /* arrowLeftSelected.png in Resources */,
+				7FA99D1E17C1CCAF003AB865 /* GameControllerStoryboard.storyboard in Resources */,
+				7FA99D1C17C1CCA5003AB865 /* MainStoryboard.storyboard in Resources */,
 				7F0CD03317C1B0F300C31BC8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

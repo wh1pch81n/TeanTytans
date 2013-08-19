@@ -7,9 +7,10 @@
 //
 
 #import "TTMainViewController.h"
+#import "TTGameControllerViewController.h"
 
 @interface TTMainViewController ()
-
+@property (strong, nonatomic) TTGameControllerViewController *gameController;
 @end
 
 @implementation TTMainViewController
@@ -27,8 +28,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	[self setGameController:[TTGameControllerViewController gameControllerCreate]];
+	
 }
-
+- (void)viewDidAppear:(BOOL)animated {
+	[self presentViewController:[self gameController]
+					   animated:YES
+					 completion:nil];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
