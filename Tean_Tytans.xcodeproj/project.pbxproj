@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F0CD02117C1B0F300C31BC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0CD02017C1B0F300C31BC8 /* Foundation.framework */; };
+		7F0CD02317C1B0F300C31BC8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0CD02217C1B0F300C31BC8 /* CoreGraphics.framework */; };
+		7F0CD02517C1B0F300C31BC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0CD02417C1B0F300C31BC8 /* UIKit.framework */; };
+		7F0CD02B17C1B0F300C31BC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD02917C1B0F300C31BC8 /* InfoPlist.strings */; };
+		7F0CD02D17C1B0F300C31BC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD02C17C1B0F300C31BC8 /* main.m */; };
+		7F0CD03117C1B0F300C31BC8 /* TTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD03017C1B0F300C31BC8 /* TTAppDelegate.m */; };
+		7F0CD03317C1B0F300C31BC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD03217C1B0F300C31BC8 /* Images.xcassets */; };
+		7F0CD03A17C1B0F300C31BC8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0CD03917C1B0F300C31BC8 /* XCTest.framework */; };
+		7F0CD03B17C1B0F300C31BC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0CD02017C1B0F300C31BC8 /* Foundation.framework */; };
+		7F0CD03C17C1B0F300C31BC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0CD02417C1B0F300C31BC8 /* UIKit.framework */; };
+		7F0CD04417C1B0F300C31BC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD04217C1B0F300C31BC8 /* InfoPlist.strings */; };
+		7F0CD04617C1B0F300C31BC8 /* Tean_TytansTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD04517C1B0F300C31BC8 /* Tean_TytansTests.m */; };
+		7F0CD06017C1B78C00C31BC8 /* arrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD05C17C1B78C00C31BC8 /* arrowLeft.png */; };
+		7F0CD06117C1B78C00C31BC8 /* arrowLeftSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD05D17C1B78C00C31BC8 /* arrowLeftSelected.png */; };
+		7F0CD06217C1B78C00C31BC8 /* arrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD05E17C1B78C00C31BC8 /* arrowRight.png */; };
+		7F0CD06317C1B78C00C31BC8 /* arrowRightSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD05F17C1B78C00C31BC8 /* arrowRightSelected.png */; };
+		7F0CD06617C1BB9700C31BC8 /* TTGameControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */; };
+		7F0CD06917C1BBC100C31BC8 /* TTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */; };
+		7F0CD06C17C1BBF400C31BC8 /* TeenTitansTogether.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD06B17C1BBF400C31BC8 /* TeenTitansTogether.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F0CD03D17C1B0F300C31BC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F0CD01517C1B0F300C31BC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F0CD01C17C1B0F300C31BC8;
+			remoteInfo = Tean_Tytans;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F0CD01D17C1B0F300C31BC8 /* Tean_Tytans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tean_Tytans.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0CD02017C1B0F300C31BC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7F0CD02217C1B0F300C31BC8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7F0CD02417C1B0F300C31BC8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7F0CD02817C1B0F300C31BC8 /* Tean_Tytans-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tean_Tytans-Info.plist"; sourceTree = "<group>"; };
+		7F0CD02A17C1B0F300C31BC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F0CD02C17C1B0F300C31BC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F0CD02E17C1B0F300C31BC8 /* Tean_Tytans-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tean_Tytans-Prefix.pch"; sourceTree = "<group>"; };
+		7F0CD02F17C1B0F300C31BC8 /* TTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAppDelegate.h; sourceTree = "<group>"; };
+		7F0CD03017C1B0F300C31BC8 /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
+		7F0CD03217C1B0F300C31BC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7F0CD03817C1B0F300C31BC8 /* Tean_TytansTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tean_TytansTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0CD03917C1B0F300C31BC8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7F0CD04117C1B0F300C31BC8 /* Tean_TytansTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tean_TytansTests-Info.plist"; sourceTree = "<group>"; };
+		7F0CD04317C1B0F300C31BC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F0CD04517C1B0F300C31BC8 /* Tean_TytansTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tean_TytansTests.m; sourceTree = "<group>"; };
+		7F0CD04F17C1B23300C31BC8 /* GameControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameControllerStoryboard.storyboard; sourceTree = "<group>"; };
+		7F0CD05117C1B26600C31BC8 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7F0CD05C17C1B78C00C31BC8 /* arrowLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrowLeft.png; path = ../arrowLeft.png; sourceTree = "<group>"; };
+		7F0CD05D17C1B78C00C31BC8 /* arrowLeftSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrowLeftSelected.png; path = ../arrowLeftSelected.png; sourceTree = "<group>"; };
+		7F0CD05E17C1B78C00C31BC8 /* arrowRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrowRight.png; path = ../arrowRight.png; sourceTree = "<group>"; };
+		7F0CD05F17C1B78C00C31BC8 /* arrowRightSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrowRightSelected.png; path = ../arrowRightSelected.png; sourceTree = "<group>"; };
+		7F0CD06417C1BB9700C31BC8 /* TTGameControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGameControllerViewController.h; sourceTree = "<group>"; };
+		7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameControllerViewController.m; sourceTree = "<group>"; };
+		7F0CD06717C1BBC100C31BC8 /* TTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMainViewController.h; sourceTree = "<group>"; };
+		7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMainViewController.m; sourceTree = "<group>"; };
+		7F0CD06B17C1BBF400C31BC8 /* TeenTitansTogether.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeenTitansTogether.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F0CD01A17C1B0F300C31BC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F0CD02317C1B0F300C31BC8 /* CoreGraphics.framework in Frameworks */,
+				7F0CD02517C1B0F300C31BC8 /* UIKit.framework in Frameworks */,
+				7F0CD02117C1B0F300C31BC8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F0CD03517C1B0F300C31BC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F0CD03A17C1B0F300C31BC8 /* XCTest.framework in Frameworks */,
+				7F0CD03C17C1B0F300C31BC8 /* UIKit.framework in Frameworks */,
+				7F0CD03B17C1B0F300C31BC8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F0CD01417C1B0F300C31BC8 = {
+			isa = PBXGroup;
+			children = (
+				7F0CD02617C1B0F300C31BC8 /* Tean_Tytans */,
+				7F0CD03F17C1B0F300C31BC8 /* Tean_TytansTests */,
+				7F0CD01F17C1B0F300C31BC8 /* Frameworks */,
+				7F0CD01E17C1B0F300C31BC8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F0CD01E17C1B0F300C31BC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CD01D17C1B0F300C31BC8 /* Tean_Tytans.app */,
+				7F0CD03817C1B0F300C31BC8 /* Tean_TytansTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F0CD01F17C1B0F300C31BC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CD02017C1B0F300C31BC8 /* Foundation.framework */,
+				7F0CD02217C1B0F300C31BC8 /* CoreGraphics.framework */,
+				7F0CD02417C1B0F300C31BC8 /* UIKit.framework */,
+				7F0CD03917C1B0F300C31BC8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F0CD02617C1B0F300C31BC8 /* Tean_Tytans */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CD06A17C1BBCC00C31BC8 /* images */,
+				7F0CD02F17C1B0F300C31BC8 /* TTAppDelegate.h */,
+				7F0CD03017C1B0F300C31BC8 /* TTAppDelegate.m */,
+				7F0CD03217C1B0F300C31BC8 /* Images.xcassets */,
+				7F0CD02717C1B0F300C31BC8 /* Supporting Files */,
+				7F0CD05017C1B24900C31BC8 /* StoryBoards */,
+				7F0CD06417C1BB9700C31BC8 /* TTGameControllerViewController.h */,
+				7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */,
+				7F0CD06717C1BBC100C31BC8 /* TTMainViewController.h */,
+				7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */,
+			);
+			path = Tean_Tytans;
+			sourceTree = "<group>";
+		};
+		7F0CD02717C1B0F300C31BC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CD02817C1B0F300C31BC8 /* Tean_Tytans-Info.plist */,
+				7F0CD02917C1B0F300C31BC8 /* InfoPlist.strings */,
+				7F0CD02C17C1B0F300C31BC8 /* main.m */,
+				7F0CD02E17C1B0F300C31BC8 /* Tean_Tytans-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F0CD03F17C1B0F300C31BC8 /* Tean_TytansTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CD04517C1B0F300C31BC8 /* Tean_TytansTests.m */,
+				7F0CD04017C1B0F300C31BC8 /* Supporting Files */,
+			);
+			path = Tean_TytansTests;
+			sourceTree = "<group>";
+		};
+		7F0CD04017C1B0F300C31BC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CD04117C1B0F300C31BC8 /* Tean_TytansTests-Info.plist */,
+				7F0CD04217C1B0F300C31BC8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F0CD05017C1B24900C31BC8 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CD04F17C1B23300C31BC8 /* GameControllerStoryboard.storyboard */,
+				7F0CD05117C1B26600C31BC8 /* MainStoryboard.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		7F0CD06A17C1BBCC00C31BC8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CD06B17C1BBF400C31BC8 /* TeenTitansTogether.png */,
+				7F0CD05C17C1B78C00C31BC8 /* arrowLeft.png */,
+				7F0CD05D17C1B78C00C31BC8 /* arrowLeftSelected.png */,
+				7F0CD05E17C1B78C00C31BC8 /* arrowRight.png */,
+				7F0CD05F17C1B78C00C31BC8 /* arrowRightSelected.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F0CD01C17C1B0F300C31BC8 /* Tean_Tytans */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F0CD04917C1B0F300C31BC8 /* Build configuration list for PBXNativeTarget "Tean_Tytans" */;
+			buildPhases = (
+				7F0CD01917C1B0F300C31BC8 /* Sources */,
+				7F0CD01A17C1B0F300C31BC8 /* Frameworks */,
+				7F0CD01B17C1B0F300C31BC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tean_Tytans;
+			productName = Tean_Tytans;
+			productReference = 7F0CD01D17C1B0F300C31BC8 /* Tean_Tytans.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F0CD03717C1B0F300C31BC8 /* Tean_TytansTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F0CD04C17C1B0F300C31BC8 /* Build configuration list for PBXNativeTarget "Tean_TytansTests" */;
+			buildPhases = (
+				7F0CD03417C1B0F300C31BC8 /* Sources */,
+				7F0CD03517C1B0F300C31BC8 /* Frameworks */,
+				7F0CD03617C1B0F300C31BC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F0CD03E17C1B0F300C31BC8 /* PBXTargetDependency */,
+			);
+			name = Tean_TytansTests;
+			productName = Tean_TytansTests;
+			productReference = 7F0CD03817C1B0F300C31BC8 /* Tean_TytansTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F0CD01517C1B0F300C31BC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TT;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Derrick Ho";
+				TargetAttributes = {
+					7F0CD01C17C1B0F300C31BC8 = {
+						DevelopmentTeam = SX585CK9M9;
+					};
+					7F0CD03717C1B0F300C31BC8 = {
+						TestTargetID = 7F0CD01C17C1B0F300C31BC8;
+					};
+				};
+			};
+			buildConfigurationList = 7F0CD01817C1B0F300C31BC8 /* Build configuration list for PBXProject "Tean_Tytans" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7F0CD01417C1B0F300C31BC8;
+			productRefGroup = 7F0CD01E17C1B0F300C31BC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F0CD01C17C1B0F300C31BC8 /* Tean_Tytans */,
+				7F0CD03717C1B0F300C31BC8 /* Tean_TytansTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F0CD01B17C1B0F300C31BC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F0CD06C17C1BBF400C31BC8 /* TeenTitansTogether.png in Resources */,
+				7F0CD06317C1B78C00C31BC8 /* arrowRightSelected.png in Resources */,
+				7F0CD06017C1B78C00C31BC8 /* arrowLeft.png in Resources */,
+				7F0CD06217C1B78C00C31BC8 /* arrowRight.png in Resources */,
+				7F0CD02B17C1B0F300C31BC8 /* InfoPlist.strings in Resources */,
+				7F0CD06117C1B78C00C31BC8 /* arrowLeftSelected.png in Resources */,
+				7F0CD03317C1B0F300C31BC8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F0CD03617C1B0F300C31BC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F0CD04417C1B0F300C31BC8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F0CD01917C1B0F300C31BC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F0CD03117C1B0F300C31BC8 /* TTAppDelegate.m in Sources */,
+				7F0CD06917C1BBC100C31BC8 /* TTMainViewController.m in Sources */,
+				7F0CD02D17C1B0F300C31BC8 /* main.m in Sources */,
+				7F0CD06617C1BB9700C31BC8 /* TTGameControllerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F0CD03417C1B0F300C31BC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F0CD04617C1B0F300C31BC8 /* Tean_TytansTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F0CD03E17C1B0F300C31BC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F0CD01C17C1B0F300C31BC8 /* Tean_Tytans */;
+			targetProxy = 7F0CD03D17C1B0F300C31BC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F0CD02917C1B0F300C31BC8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F0CD02A17C1B0F300C31BC8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7F0CD04217C1B0F300C31BC8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F0CD04317C1B0F300C31BC8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F0CD04717C1B0F300C31BC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7F0CD04817C1B0F300C31BC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F0CD04A17C1B0F300C31BC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tean_Tytans/Tean_Tytans-Prefix.pch";
+				INFOPLIST_FILE = "Tean_Tytans/Tean_Tytans-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7F0CD04B17C1B0F300C31BC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tean_Tytans/Tean_Tytans-Prefix.pch";
+				INFOPLIST_FILE = "Tean_Tytans/Tean_Tytans-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7F0CD04D17C1B0F300C31BC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tean_Tytans.app/Tean_Tytans";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tean_Tytans/Tean_Tytans-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tean_TytansTests/Tean_TytansTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7F0CD04E17C1B0F300C31BC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tean_Tytans.app/Tean_Tytans";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tean_Tytans/Tean_Tytans-Prefix.pch";
+				INFOPLIST_FILE = "Tean_TytansTests/Tean_TytansTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F0CD01817C1B0F300C31BC8 /* Build configuration list for PBXProject "Tean_Tytans" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F0CD04717C1B0F300C31BC8 /* Debug */,
+				7F0CD04817C1B0F300C31BC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F0CD04917C1B0F300C31BC8 /* Build configuration list for PBXNativeTarget "Tean_Tytans" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F0CD04A17C1B0F300C31BC8 /* Debug */,
+				7F0CD04B17C1B0F300C31BC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F0CD04C17C1B0F300C31BC8 /* Build configuration list for PBXNativeTarget "Tean_TytansTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F0CD04D17C1B0F300C31BC8 /* Debug */,
+				7F0CD04E17C1B0F300C31BC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F0CD01517C1B0F300C31BC8 /* Project object */;
+}
