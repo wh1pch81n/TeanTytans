@@ -25,7 +25,7 @@
 		7F0CD06317C1B78C00C31BC8 /* arrowRightSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD05F17C1B78C00C31BC8 /* arrowRightSelected.png */; };
 		7F0CD06617C1BB9700C31BC8 /* TTGameControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */; };
 		7F0CD06917C1BBC100C31BC8 /* TTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */; };
-		7F0CD06C17C1BBF400C31BC8 /* TeenTitansTogether.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD06B17C1BBF400C31BC8 /* TeenTitansTogether.png */; };
+		7F600C3717C1C95E001C1AD6 /* TeenTitansTogether.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F600C3617C1C95E001C1AD6 /* TeenTitansTogether.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameControllerViewController.m; sourceTree = "<group>"; };
 		7F0CD06717C1BBC100C31BC8 /* TTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMainViewController.h; sourceTree = "<group>"; };
 		7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMainViewController.m; sourceTree = "<group>"; };
-		7F0CD06B17C1BBF400C31BC8 /* TeenTitansTogether.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeenTitansTogether.png; sourceTree = "<group>"; };
+		7F600C3617C1C95E001C1AD6 /* TeenTitansTogether.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeenTitansTogether.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +180,7 @@
 		7F0CD06A17C1BBCC00C31BC8 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				7F0CD06B17C1BBF400C31BC8 /* TeenTitansTogether.png */,
+				7F600C3617C1C95E001C1AD6 /* TeenTitansTogether.png */,
 				7F0CD05C17C1B78C00C31BC8 /* arrowLeft.png */,
 				7F0CD05D17C1B78C00C31BC8 /* arrowLeftSelected.png */,
 				7F0CD05E17C1B78C00C31BC8 /* arrowRight.png */,
@@ -268,8 +268,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F0CD06C17C1BBF400C31BC8 /* TeenTitansTogether.png in Resources */,
 				7F0CD06317C1B78C00C31BC8 /* arrowRightSelected.png in Resources */,
+				7F600C3717C1C95E001C1AD6 /* TeenTitansTogether.png in Resources */,
 				7F0CD06017C1B78C00C31BC8 /* arrowLeft.png in Resources */,
 				7F0CD06217C1B78C00C31BC8 /* arrowRight.png in Resources */,
 				7F0CD02B17C1B0F300C31BC8 /* InfoPlist.strings in Resources */,
@@ -369,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -400,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -35,18 +35,25 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)arrowLeftPressed:(id)sender {
+	DLog(@"Arrow left has been pressed");
 }
 - (IBAction)arrowLeftRelease:(id)sender {
+	DLog(@"Arrow Left has been released");
 }
 - (IBAction)arrowRightPressed:(id)sender {
+	DLog(@"arrow Right has been released")
 }
 - (IBAction)arrowRightRelease:(id)sender {
+	DLog(@"arrow right has been released");
 }
 - (IBAction)actionAttackTapped:(id)sender {
+	DLog(@"attack!");
 }
 - (IBAction)actionSpecialRotate:(id)sender {
+	DLog(@"rotate and do something special");
 }
 - (IBAction)actionGrabPinch:(id)sender {
+	DLog(@"pinch in");
 }
 
 
