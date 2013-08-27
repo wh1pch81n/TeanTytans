@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface TTGameControllerViewController : UIViewController
+#import "TTGameControllerDelegate.h"
+@interface TTGameControllerViewController : UIViewController {
+	NSMutableDictionary *buttonStateDict;
+}
+@property (readonly) NSMutableDictionary *buttonStateDict;
+@property (weak, nonatomic) id delegate;
 + (TTGameControllerViewController *)gameControllerCreate;
 @end

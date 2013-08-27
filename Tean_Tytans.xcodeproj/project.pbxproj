@@ -67,6 +67,7 @@
 		7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameControllerViewController.m; sourceTree = "<group>"; };
 		7F0CD06717C1BBC100C31BC8 /* TTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMainViewController.h; sourceTree = "<group>"; };
 		7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMainViewController.m; sourceTree = "<group>"; };
+		7F4BCB4817CC23900073ABD3 /* TTGameControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTGameControllerDelegate.h; sourceTree = "<group>"; };
 		7F600C3617C1C95E001C1AD6 /* TeenTitansTogether.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeenTitansTogether.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -133,6 +134,7 @@
 				7F0CD03217C1B0F300C31BC8 /* Images.xcassets */,
 				7F0CD02717C1B0F300C31BC8 /* Supporting Files */,
 				7F0CD05017C1B24900C31BC8 /* StoryBoards */,
+				7F4BCB4817CC23900073ABD3 /* TTGameControllerDelegate.h */,
 				7F0CD06417C1BB9700C31BC8 /* TTGameControllerViewController.h */,
 				7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */,
 				7F0CD06717C1BBC100C31BC8 /* TTMainViewController.h */,

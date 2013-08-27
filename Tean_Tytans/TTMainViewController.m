@@ -32,9 +32,11 @@
 	
 }
 - (void)viewDidAppear:(BOOL)animated {
-	[self presentViewController:[self gameController]
-					   animated:YES
-					 completion:nil];
+//	[self presentViewController:[self gameController]
+//					   animated:YES
+//					 completion:nil];
+	[[self view] addSubview:[[self gameController] view]];
+	[[self gameController] setDelegate:self];
 }
 - (void)didReceiveMemoryWarning
 {
