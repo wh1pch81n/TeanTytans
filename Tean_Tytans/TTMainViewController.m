@@ -28,13 +28,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-	[self setGameController:[TTGameControllerViewController gameControllerCreate]];
-	
 }
 - (void)viewDidAppear:(BOOL)animated {
-//	[self presentViewController:[self gameController]
-//					   animated:YES
-//					 completion:nil];
+	[super viewDidAppear:animated];
+	[self setGameController:[TTGameControllerViewController gameControllerCreate]];
 	[[self view] addSubview:[[self gameController] view]];
 	[[self gameController] setDelegate:self];
 }
@@ -44,4 +41,37 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dismissGameController {
+	for (UIView *layer in [[self view] subviews]) {
+		if (layer == [[self gameController] view]) {
+			[layer removeFromSuperview];
+		}
+	}
+	[self setGameController:nil];
+}
+- (void)actionButtonHasBeenTapped {
+	[[self image] setHidden:![[self image] isHidden]];
+}
+- (void)actionButtonHasBeenRotated:(UIRotationGestureRecognizer *)rotationRecognizer {
+	float angle = [rotationRecognizer rotation];
+	[[self image] setTransform:CGAffineTransformMakeRotation(angle)];
+	printf("angle(%f)\n", angle);
+}
+- (void)actionButtonHasBeenPinched:(UIPinchGestureRecognizer *)pinchRecognizer {
+	float scale = [pinchRecognizer scale];
+	[[self image] setTransform:CGAffineTransformMakeScale(scale, scale)];
+	printf("scale(%f)\n", scale);
+}
+- (void)leftButtonHasBeenPressed {
+	
+}
+- (void)leftButtonHasBeenReleased {
+	
+}
+- (void)rightButtonHasBeenPressed {
+	
+}
+- (void)rightButtonHasBeenReleased {
+	
+}
 @end

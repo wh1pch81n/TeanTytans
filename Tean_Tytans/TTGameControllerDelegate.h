@@ -12,8 +12,13 @@
 @required
 - (void)dismissGameController;
 - (void)actionButtonHasBeenTapped;
-- (void)actionButtonHasBeenRotated;
-- (void)actionButtonHasBeenPinched;
+- (void)actionButtonHasBeenRotated:(UIRotationGestureRecognizer *)rotationRecognizer;
+- (void)actionButtonHasBeenPinched:(UIPinchGestureRecognizer *)pinchRecognizer;
+- (void)leftButtonHasBeenPressed;
+- (void)leftButtonHasBeenReleased;
+- (void)rightButtonHasBeenPressed;
+- (void)rightButtonHasBeenReleased;
+
 @optional
 - (void)gameControllerWillTapAction;
 - (void)gameControllerDidTapAction;

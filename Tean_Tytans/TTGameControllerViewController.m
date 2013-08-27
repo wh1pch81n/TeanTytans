@@ -27,53 +27,69 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-	buttonStateDict = [NSMutableDictionary new];
+	//set delegates of gesture recognizers for simultaneous events
+	
 }
-
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+	return YES;
+}
 #pragma mark - button IBactions
 - (IBAction)arrowLeftPressed:(id)sender {
-	#warning You must ask the delegate if it responds to the method call or else it will crash.
-	[[self delegate] gameControllerWillPressLeftButton];
-	DLog(@"Arrow left has been pressed");
-	[buttonStateDict setObject:kPressed forKey:kLeftButton];
-	[[self delegate] gameControllerDidPressLeftButton];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerWillPressLeftButton)])
+		[[self delegate] gameControllerWillPressLeftButton];
+	if ([[self delegate] respondsToSelector:@selector(leftButtonHasBeenPressed)])
+		[[self delegate] leftButtonHasBeenPressed];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerDidPressLeftButton)])
+		[[self delegate] gameControllerDidPressLeftButton];
 }
 - (IBAction)arrowLeftRelease:(id)sender {
-	[[self delegate] gameControllerWillReleaseLeftButton];
-	DLog(@"Arrow Left has been released");
-	[buttonStateDict setObject:kReleased forKey:kLeftButton];
-	[[self delegate] gameControllerDidReleaseLeftButton];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerWillReleaseLeftButton)])
+		[[self delegate] gameControllerWillReleaseLeftButton];
+	if ([[self delegate] respondsToSelector:@selector(leftButtonHasBeenReleased)])
+		[[self delegate] leftButtonHasBeenReleased];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerDidReleaseLeftButton)])
+		[[self delegate] gameControllerDidReleaseLeftButton];
 }
 - (IBAction)arrowRightPressed:(id)sender {
-	[[self delegate] gameControllerWillPressRightButton];
-	DLog(@"arrow Right has been pressed")
-	[buttonStateDict setObject:kPressed forKey:kRightButton];
-	[[self delegate] gameControllerDidPressRightButton];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerWillPressRightButton)])
+		[[self delegate] gameControllerWillPressRightButton];
+	if ([[self delegate] respondsToSelector:@selector(rightButtonHasBeenPressed)])
+		[[self delegate] rightButtonHasBeenPressed];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerDidPressRightButton)])
+		[[self delegate] gameControllerDidPressRightButton];
 }
 - (IBAction)arrowRightRelease:(id)sender {
-	[[self delegate] gameControllerWillReleaseRightButton];
-	DLog(@"arrow right has been released");
-	[buttonStateDict setObject:kReleased forKey:kRightButton];
-	[[self delegate] gameControllerDidReleaseRightButton];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerWillReleaseRightButton)])
+		[[self delegate] gameControllerWillReleaseRightButton];
+	if ([[self delegate] respondsToSelector:@selector(rightButtonHasBeenReleased)])
+		[[self delegate] rightButtonHasBeenReleased];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerDidReleaseRightButton)])
+		[[self delegate] gameControllerDidReleaseRightButton];
 }
 - (IBAction)actionAttackTapped:(id)sender {
-	[[self delegate] gameControllerWillTapAction];
-	DLog(@"attack!");
-	[[self delegate] actionButtonHasBeenTapped];
-	[[self delegate] gameControllerDidTapAction];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerWillTapAction)])
+		[[self delegate] gameControllerWillTapAction];
+	if ([[self delegate] respondsToSelector:@selector(actionButtonHasBeenTapped)])
+		[[self delegate] actionButtonHasBeenTapped];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerDidTapAction)])
+		[[self delegate] gameControllerDidTapAction];
 }
 
-- (IBAction)actionSpecialRotate:(id)sender {
-	[[self delegate] gameControllerWillRotateAction];
-	DLog(@"rotate and do something special");
-	[[self delegate] actionButtonHasBeenRotated];
-	[[self delegate] gameControllerDidRotateAction];
+- (IBAction)actionSpecialRotate:(UIRotationGestureRecognizer *)rotationRecognizer {
+	if ([[self delegate] respondsToSelector:@selector(gameControllerWillRotateAction)])
+		[[self delegate] gameControllerWillRotateAction];
+	if ([[self delegate] respondsToSelector:@selector(actionButtonHasBeenRotated:)])
+		[[self delegate] actionButtonHasBeenRotated:rotationRecognizer];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerDidRotateAction)])
+		[[self delegate] gameControllerDidRotateAction];
 }
-- (IBAction)actionGrabPinch:(id)sender {
-	[[self delegate] gameControllerWillPinchAction];
-	DLog(@"pinch in");
-	[[self delegate] actionButtonHasBeenPinched];
-	[[self delegate] gameControllerDidPinchAction];
+- (IBAction)actionGrabPinch:(UIPinchGestureRecognizer *)pinchRecognizer {
+	if ([[self delegate] respondsToSelector:@selector(gameControllerWillPinchAction)])
+		[[self delegate] gameControllerWillPinchAction];
+	if ([[self delegate] respondsToSelector:@selector(actionButtonHasBeenPinched:)])
+		[[self delegate] actionButtonHasBeenPinched:pinchRecognizer];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerDidPinchAction)])
+		[[self delegate] gameControllerDidPinchAction];
 }
 
 

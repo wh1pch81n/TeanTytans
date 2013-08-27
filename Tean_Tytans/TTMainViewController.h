@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTGameControllerDelegate.h"
 
-@interface TTMainViewController : UIViewController
+@interface TTMainViewController : UIViewController <TTGameControllerDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *image;
 
 @end
