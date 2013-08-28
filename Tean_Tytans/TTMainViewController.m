@@ -54,13 +54,45 @@
 }
 - (void)actionButtonHasBeenRotated:(UIRotationGestureRecognizer *)rotationRecognizer {
 	float angle = [rotationRecognizer rotation];
-	[[self image] setTransform:CGAffineTransformMakeRotation(angle)];
-	printf("angle(%f)\n", angle);
+	static float lastAngle = 0;
+	int ax = (angle - lastAngle > 0)? 1:(angle - lastAngle < 0)? -1:0;
+	float angleAmount = M_PI/180;
+	CGAffineTransform currTrans = [[self image] transform];
+	CGAffineTransform newTrans = CGAffineTransformRotate(currTrans,  (angleAmount *ax));
+	
+	[[self image] setTransform:newTrans];
+	printf("angle(%f) , a%f, b%f, c%f, d%f, tx%f, ty%f\n", angle,
+		   self.image.transform.a,
+		   self.image.transform.b,
+		   self.image.transform.c,
+		   self.image.transform.d,
+		   self.image.transform.tx,
+		   self.image.transform.ty);
+	lastAngle = angle;
 }
 - (void)actionButtonHasBeenPinched:(UIPinchGestureRecognizer *)pinchRecognizer {
 	float scale = [pinchRecognizer scale];
-	[[self image] setTransform:CGAffineTransformMakeScale(scale, scale)];
-	printf("scale(%f)\n", scale);
+	static float lastScale = 1.0;
+	int sx = (scale - lastScale > 0)? 1:(scale - lastScale < 0)? -1:0;
+	float scaleAmount = 0.05;
+	CGAffineTransform currTrans = [[self image] transform];
+//	CGAffineTransform newTrans = CGAffineTransformScale(currTrans, (scaleAmount*sx), (scaleAmount*sx));
+	CGAffineTransform newTrans = CGAffineTransformMake(currTrans.a + (scaleAmount*sx),
+													   currTrans.b,
+													   currTrans.c,
+													   currTrans.d + (scaleAmount*sx),
+													   currTrans.tx,
+													   currTrans.ty);
+	[[self image] setTransform:newTrans];
+	
+	DLog(@"scale(%f) Lscale(%f), sx(%d) , a%f, b%f, c%f, d%f, tx%f, ty%f\n", scale, lastScale, sx,
+		   self.image.transform.a,
+		   self.image.transform.b,
+		   self.image.transform.c,
+		   self.image.transform.d,
+		   self.image.transform.tx,
+		   self.image.transform.ty);
+	lastScale = scale;
 }
 - (void)leftButtonHasBeenPressed {
 	

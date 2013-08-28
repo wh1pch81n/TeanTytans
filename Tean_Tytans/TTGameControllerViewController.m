@@ -26,9 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-	//set delegates of gesture recognizers for simultaneous events
-	
+	// Do any additional setup after loading the view.	
 }
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
 	return YES;
@@ -73,6 +71,14 @@
 		[[self delegate] actionButtonHasBeenTapped];
 	if ([[self delegate] respondsToSelector:@selector(gameControllerDidTapAction)])
 		[[self delegate] gameControllerDidTapAction];
+}
+- (IBAction)actionSwipe:(UISwipeGestureRecognizer *)sender {
+	if ([[self delegate] respondsToSelector:@selector(gameControllerWillSwipeAction)])
+		[[self delegate] gameControllerWillSwipeAction];
+	if ([[self delegate] respondsToSelector:@selector(actionButtonHasBeenSwiped:)])
+		[[self delegate] actionButtonHasBeenSwiped:sender];
+	if ([[self delegate] respondsToSelector:@selector(gameControllerDidSwipeAction)])
+		[[self delegate] gameControllerDidSwipeAction];
 }
 
 - (IBAction)actionSpecialRotate:(UIRotationGestureRecognizer *)rotationRecognizer {

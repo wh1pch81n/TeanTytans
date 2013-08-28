@@ -11,10 +11,10 @@
                 <viewController storyboardIdentifier="GameControllerID" title="GameController" id="zWE-GQ-RWd" customClass="TTGameControllerViewController" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qhb-3F-0Dg">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wqf-TH-H2r" userLabel="Button -arrowLeft">
-                                <rect key="frame" x="0.0" y="0.0" width="91" height="320"/>
+                                <rect key="frame" x="0.0" y="270" width="91" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ITc-05-N8h" userLabel="Button -arrowRight">
-                                <rect key="frame" x="477" y="0.0" width="91" height="320"/>
+                                <rect key="frame" x="477" y="270" width="91" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -41,26 +41,24 @@
                                     <action selector="arrowRightRelease:" destination="zWE-GQ-RWd" eventType="touchUpInside" id="ugo-qq-KW8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.49999999999999994" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v5q-bI-d0U" userLabel="Button - action">
-                                <rect key="frame" x="91" y="0.0" width="386" height="320"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
+                            <containerView contentMode="scaleToFill" id="E9f-gR-VDd">
+                                <rect key="frame" x="99" y="240" width="370" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="M80-xb-3MA" appends="YES" id="wby-Ma-Bwh"/>
-                                    <outletCollection property="gestureRecognizers" destination="JZu-ih-jtM" appends="YES" id="vve-Gb-D2f"/>
-                                    <outletCollection property="gestureRecognizers" destination="8Gy-8M-LVW" appends="YES" id="xZb-Yk-drZ"/>
+                                    <segue destination="R6E-SZ-xJn" kind="embed" id="PGL-hf-adU"/>
                                 </connections>
-                            </button>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8Gy-8M-LVW" appends="YES" id="5CI-Di-G2B"/>
+                            <outletCollection property="gestureRecognizers" destination="JZu-ih-jtM" appends="YES" id="Wzl-M7-ob0"/>
+                            <outletCollection property="gestureRecognizers" destination="M80-xb-3MA" appends="YES" id="ao1-Lr-33g"/>
+                            <outletCollection property="gestureRecognizers" destination="vAO-7K-w9y" appends="YES" id="dx1-ev-hmb"/>
+                        </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -77,7 +75,7 @@
                 <pinchGestureRecognizer id="JZu-ih-jtM">
                     <connections>
                         <action selector="actionGrabPinch:" destination="zWE-GQ-RWd" id="Za5-JM-a0Z"/>
-                        <outlet property="delegate" destination="zWE-GQ-RWd" id="Lnc-3P-QKB"/>
+                        <outlet property="delegate" destination="zWE-GQ-RWd" id="nOk-Ds-I0L"/>
                     </connections>
                 </pinchGestureRecognizer>
                 <rotationGestureRecognizer id="M80-xb-3MA">
@@ -86,8 +84,29 @@
                         <outlet property="delegate" destination="zWE-GQ-RWd" id="pC8-wp-Ntx"/>
                     </connections>
                 </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="vAO-7K-w9y">
+                    <connections>
+                        <action selector="actionSwipe:" destination="zWE-GQ-RWd" id="ygT-tS-86q"/>
+                        <outlet property="delegate" destination="zWE-GQ-RWd" id="4o7-WN-CLR"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="253" y="99"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kc9-4M-X1h">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="R6E-SZ-xJn" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FuF-P5-73w">
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Vo-bL-B1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

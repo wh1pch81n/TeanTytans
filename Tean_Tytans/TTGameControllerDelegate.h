@@ -11,9 +11,11 @@
 @protocol TTGameControllerDelegate <NSObject>
 @required
 - (void)dismissGameController;
+@optional
 - (void)actionButtonHasBeenTapped;
 - (void)actionButtonHasBeenRotated:(UIRotationGestureRecognizer *)rotationRecognizer;
 - (void)actionButtonHasBeenPinched:(UIPinchGestureRecognizer *)pinchRecognizer;
+- (void)actionButtonHasBeenSwiped:(UISwipeGestureRecognizer *)swipeRecognizer;
 - (void)leftButtonHasBeenPressed;
 - (void)leftButtonHasBeenReleased;
 - (void)rightButtonHasBeenPressed;
@@ -26,6 +28,8 @@
 - (void)gameControllerDidRotateAction;
 - (void)gameControllerWillPinchAction;
 - (void)gameControllerDidPinchAction;
+- (void)gameControllerWillSwipeAction;
+- (void)gameControllerDidSwipeAction;
 - (void)gameControllerWillPressLeftButton;
 - (void)gameControllerDidPressLeftButton;
 - (void)gameControllerWillReleaseLeftButton;
