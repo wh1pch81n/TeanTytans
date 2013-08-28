@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface TTGameControllerViewController : UIViewController
-
+#import "TTGameControllerDelegate.h"
+@interface TTGameControllerViewController : UIViewController <UIGestureRecognizerDelegate>
+@property (weak, nonatomic) id delegate;
++ (TTGameControllerViewController *)gameControllerCreate;
 @end
