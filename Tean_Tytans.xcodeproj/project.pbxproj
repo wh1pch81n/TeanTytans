@@ -25,6 +25,8 @@
 		7F0CD06317C1B78C00C31BC8 /* arrowRightSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD05F17C1B78C00C31BC8 /* arrowRightSelected.png */; };
 		7F0CD06617C1BB9700C31BC8 /* TTGameControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */; };
 		7F0CD06917C1BBC100C31BC8 /* TTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */; };
+		7F42A19417CEA30400DE47D8 /* TTDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F42A19317CEA30400DE47D8 /* TTDialogViewController.m */; };
+		7F42A19517CEA30400DE47D8 /* TTDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F42A19317CEA30400DE47D8 /* TTDialogViewController.m */; };
 		7F600C3717C1C95E001C1AD6 /* TeenTitansTogether.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F600C3617C1C95E001C1AD6 /* TeenTitansTogether.png */; };
 		7FA99D1C17C1CCA5003AB865 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD05117C1B26600C31BC8 /* MainStoryboard.storyboard */; };
 		7FA99D1E17C1CCAF003AB865 /* GameControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0CD04F17C1B23300C31BC8 /* GameControllerStoryboard.storyboard */; };
@@ -67,6 +69,8 @@
 		7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGameControllerViewController.m; sourceTree = "<group>"; };
 		7F0CD06717C1BBC100C31BC8 /* TTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMainViewController.h; sourceTree = "<group>"; };
 		7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMainViewController.m; sourceTree = "<group>"; };
+		7F42A19217CEA30400DE47D8 /* TTDialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDialogViewController.h; sourceTree = "<group>"; };
+		7F42A19317CEA30400DE47D8 /* TTDialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDialogViewController.m; sourceTree = "<group>"; };
 		7F4BCB4817CC23900073ABD3 /* TTGameControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTGameControllerDelegate.h; sourceTree = "<group>"; };
 		7F600C3617C1C95E001C1AD6 /* TeenTitansTogether.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeenTitansTogether.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -129,16 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				7F0CD06A17C1BBCC00C31BC8 /* images */,
-				7F0CD02F17C1B0F300C31BC8 /* TTAppDelegate.h */,
-				7F0CD03017C1B0F300C31BC8 /* TTAppDelegate.m */,
 				7F0CD03217C1B0F300C31BC8 /* Images.xcassets */,
 				7F0CD02717C1B0F300C31BC8 /* Supporting Files */,
 				7F0CD05017C1B24900C31BC8 /* StoryBoards */,
-				7F4BCB4817CC23900073ABD3 /* TTGameControllerDelegate.h */,
-				7F0CD06417C1BB9700C31BC8 /* TTGameControllerViewController.h */,
-				7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */,
-				7F0CD06717C1BBC100C31BC8 /* TTMainViewController.h */,
-				7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */,
+				7F42A19117CEA2C700DE47D8 /* protocols */,
+				7F42A19017CEA29800DE47D8 /* headers_and_implementation */,
 			);
 			path = Tean_Tytans;
 			sourceTree = "<group>";
@@ -191,6 +190,29 @@
 				7F0CD05F17C1B78C00C31BC8 /* arrowRightSelected.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		7F42A19017CEA29800DE47D8 /* headers_and_implementation */ = {
+			isa = PBXGroup;
+			children = (
+				7F0CD02F17C1B0F300C31BC8 /* TTAppDelegate.h */,
+				7F0CD03017C1B0F300C31BC8 /* TTAppDelegate.m */,
+				7F0CD06417C1BB9700C31BC8 /* TTGameControllerViewController.h */,
+				7F0CD06517C1BB9700C31BC8 /* TTGameControllerViewController.m */,
+				7F0CD06717C1BBC100C31BC8 /* TTMainViewController.h */,
+				7F0CD06817C1BBC100C31BC8 /* TTMainViewController.m */,
+				7F42A19217CEA30400DE47D8 /* TTDialogViewController.h */,
+				7F42A19317CEA30400DE47D8 /* TTDialogViewController.m */,
+			);
+			name = headers_and_implementation;
+			sourceTree = "<group>";
+		};
+		7F42A19117CEA2C700DE47D8 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7F4BCB4817CC23900073ABD3 /* TTGameControllerDelegate.h */,
+			);
+			name = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F42A19417CEA30400DE47D8 /* TTDialogViewController.m in Sources */,
 				7F0CD03117C1B0F300C31BC8 /* TTAppDelegate.m in Sources */,
 				7F0CD06917C1BBC100C31BC8 /* TTMainViewController.m in Sources */,
 				7F0CD02D17C1B0F300C31BC8 /* main.m in Sources */,
@@ -310,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F42A19517CEA30400DE47D8 /* TTDialogViewController.m in Sources */,
 				7F0CD04617C1B0F300C31BC8 /* Tean_TytansTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

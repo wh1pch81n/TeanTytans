@@ -41,7 +41,7 @@
                                     <action selector="arrowRightRelease:" destination="zWE-GQ-RWd" eventType="touchUpInside" id="ugo-qq-KW8"/>
                                 </connections>
                             </button>
-                            <containerView contentMode="scaleToFill" id="E9f-gR-VDd">
+                            <containerView contentMode="scaleToFill" id="E9f-gR-VDd" userLabel="Container View -dialogView">
                                 <rect key="frame" x="99" y="240" width="370" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -93,13 +93,28 @@
             </objects>
             <point key="canvasLocation" x="253" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--Dialog View Controller-->
         <scene sceneID="Kc9-4M-X1h">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="R6E-SZ-xJn" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="R6E-SZ-xJn" customClass="TTDialogViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FuF-P5-73w">
                         <rect key="frame" x="0.0" y="0.0" width="370" height="80"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="oe9-Zm-Uij" userLabel="Image View -coverPhoto">
+                                <rect key="frame" x="5" y="5" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="OKl-ho-bvf" userLabel="Scroll View -dialog">
+                                <rect key="frame" x="80" y="5" width="285" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                            <view alpha="0.0" contentMode="scaleToFill" id="iFh-at-bEI" userLabel="gesture interface">
+                                <rect key="frame" x="0.0" y="0.0" width="370" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -107,6 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vo-bL-B1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="947" y="219"/>
         </scene>
     </scenes>
     <resources>
