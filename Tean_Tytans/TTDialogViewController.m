@@ -34,5 +34,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)addDialogWithImage:(UIImage *)image withText:(NSString *)text {
+	[_dialog setText:text];
+}
 @end

@@ -10,7 +10,7 @@
             <objects>
                 <viewController storyboardIdentifier="GameControllerID" title="GameController" id="zWE-GQ-RWd" customClass="TTGameControllerViewController" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qhb-3F-0Dg">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wqf-TH-H2r" userLabel="Button -arrowLeft">
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ITc-05-N8h" userLabel="Button -arrowRight">
-                                <rect key="frame" x="477" y="270" width="91" height="50"/>
+                                <rect key="frame" x="389" y="270" width="91" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -42,8 +42,8 @@
                                 </connections>
                             </button>
                             <containerView contentMode="scaleToFill" id="E9f-gR-VDd" userLabel="Container View -dialogView">
-                                <rect key="frame" x="99" y="240" width="370" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="99" y="240" width="282" height="80"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="R6E-SZ-xJn" kind="embed" id="PGL-hf-adU"/>
@@ -64,6 +64,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="containerDialogView" destination="E9f-gR-VDd" id="xn4-Ag-qid"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHr-eT-Lcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="8Gy-8M-LVW">
@@ -96,22 +100,26 @@
         <!--Dialog View Controller-->
         <scene sceneID="Kc9-4M-X1h">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="R6E-SZ-xJn" customClass="TTDialogViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dialogControllerID" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R6E-SZ-xJn" customClass="TTDialogViewController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FuF-P5-73w">
-                        <rect key="frame" x="0.0" y="0.0" width="370" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="282" height="80"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="oe9-Zm-Uij" userLabel="Image View -coverPhoto">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TeenTitansTogether.png" id="oe9-Zm-Uij" userLabel="Image View -coverPhoto">
                                 <rect key="frame" x="5" y="5" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="OKl-ho-bvf" userLabel="Scroll View -dialog">
-                                <rect key="frame" x="80" y="5" width="285" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" id="cQy-tt-Nbb" userLabel="Text View -dialog">
+                                <rect key="frame" x="80" y="5" width="197" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textView>
                             <view alpha="0.0" contentMode="scaleToFill" id="iFh-at-bEI" userLabel="gesture interface">
-                                <rect key="frame" x="0.0" y="0.0" width="370" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="282" height="80"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -119,13 +127,18 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="_coverPhoto" destination="oe9-Zm-Uij" id="VyC-ut-TBN"/>
+                        <outlet property="_dialog" destination="cQy-tt-Nbb" id="5c7-Zm-6pq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vo-bL-B1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="947" y="219"/>
+            <point key="canvasLocation" x="774" y="219"/>
         </scene>
     </scenes>
     <resources>
+        <image name="TeenTitansTogether.png" width="280" height="195"/>
         <image name="arrowLeft.png" width="33.746482849121094" height="27.747108459472656"/>
         <image name="arrowLeftSelected.png" width="24" height="24"/>
         <image name="arrowRight.png" width="33.746482849121094" height="27.747108459472656"/>

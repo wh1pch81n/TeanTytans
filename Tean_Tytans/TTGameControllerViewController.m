@@ -7,13 +7,15 @@
 //
 
 #import "TTGameControllerViewController.h"
+#import "TTDialogViewController.h"
 #define kLeftButton @"LeftButton"
 #define kRightButton @"RightButton"
 #define kPressed [NSNumber numberWithBool:YES]
 #define kReleased [NSNumber numberWithBool:NO]
 
 @interface TTGameControllerViewController ()
-
+@property (weak, nonatomic) IBOutlet UIView *containerDialogView;
+@property (strong, nonatomic) TTDialogViewController *dialogViewController;
 @end
 
 @implementation TTGameControllerViewController
@@ -98,5 +100,16 @@
 		[[self delegate] gameControllerDidPinchAction];
 }
 
+#pragma mark - messaging/dialog
+- (void)displayDialogWithImage:(UIImage *)image withDialog:(NSString *)text {
+	for (UIViewController *vc in [self childViewControllers]) {
+		if ([vc isKindOfClass:[TTDialogViewController class]]) {
+			[self setDialogViewController:(TTDialogViewController *)vc];
+		}
+		NSLog(@"%@",vc);
+	}
+	
+	[[self dialogViewController] addDialogWithImage:image withText:text];
+}
 
 @end

@@ -11,4 +11,5 @@
 @interface TTGameControllerViewController : UIViewController <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) id delegate;
 + (TTGameControllerViewController *)gameControllerCreate;
+- (void) displayDialogWithImage:(UIImage *)image withDialog:(NSString *)text;
 @end

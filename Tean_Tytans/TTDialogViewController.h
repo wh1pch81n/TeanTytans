@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TTDialogViewController : UIViewController
-
+@interface TTDialogViewController : UIViewController {
+	__weak IBOutlet UIImageView *_coverPhoto;
+	__weak IBOutlet UITextView *_dialog;
+}
+- (void)addDialogWithImage:(UIImage *)image withText:(NSString *)text;
 @end

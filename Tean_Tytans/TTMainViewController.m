@@ -34,6 +34,7 @@
 	[self setGameController:[TTGameControllerViewController gameControllerCreate]];
 	[[self view] addSubview:[[self gameController] view]];
 	[[self gameController] setDelegate:self];
+	[[self gameController] displayDialogWithImage:nil withDialog:@"roger wilco"];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -95,10 +96,10 @@
 	lastScale = scale;
 }
 - (void)leftButtonHasBeenPressed {
-	
+	[[self gameController] displayDialogWithImage:nil withDialog:@"cow"];
 }
 - (void)leftButtonHasBeenReleased {
-	
+	[[self gameController] displayDialogWithImage:nil withDialog:@"pig"];	
 }
 - (void)rightButtonHasBeenPressed {
 	
