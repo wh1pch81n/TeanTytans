@@ -14,7 +14,6 @@
 #define kReleased [NSNumber numberWithBool:NO]
 
 @interface TTGameControllerViewController ()
-@property (weak, nonatomic) IBOutlet UIView *containerDialogView;
 @property (strong, nonatomic) TTDialogViewController *dialogViewController;
 @end
 
@@ -102,14 +101,16 @@
 
 #pragma mark - messaging/dialog
 - (void)displayDialogWithImage:(UIImage *)image withDialog:(NSString *)text {
+	if ([self dialogViewController] == nil) {
+		[self setupDialogViewController];
+	}
+	[[self dialogViewController] addDialogWithImage:image withText:text];
+}
+- (void)setupDialogViewController {
 	for (UIViewController *vc in [self childViewControllers]) {
 		if ([vc isKindOfClass:[TTDialogViewController class]]) {
 			[self setDialogViewController:(TTDialogViewController *)vc];
 		}
-		NSLog(@"%@",vc);
 	}
-	
-	[[self dialogViewController] addDialogWithImage:image withText:text];
 }
-
 @end

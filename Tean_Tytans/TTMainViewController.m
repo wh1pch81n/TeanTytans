@@ -34,7 +34,6 @@
 	[self setGameController:[TTGameControllerViewController gameControllerCreate]];
 	[[self view] addSubview:[[self gameController] view]];
 	[[self gameController] setDelegate:self];
-	[[self gameController] displayDialogWithImage:nil withDialog:@"roger wilco"];
 }
 - (void)didReceiveMemoryWarning
 {
