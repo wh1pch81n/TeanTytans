@@ -119,18 +119,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textView>
-                            <view contentMode="scaleToFill" id="iFh-at-bEI" userLabel="gesture interface">
-                                <rect key="frame" x="0.0" y="0.0" width="282" height="80"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="etR-VQ-GvJ" appends="YES" id="Yrt-IM-Tgc"/>
-                                </connections>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="0.66000000000000003" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="etR-VQ-GvJ" appends="YES" id="xWQ-Ft-bzA"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <connections>
@@ -141,7 +135,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vo-bL-B1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="etR-VQ-GvJ">
                     <connections>
-                        <action selector="tappedDialogView:" destination="R6E-SZ-xJn" id="8u8-Qk-vYF"/>
+                        <action selector="tappedDialogView:" destination="R6E-SZ-xJn" id="RBS-Hi-bd4"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
