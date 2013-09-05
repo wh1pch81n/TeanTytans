@@ -37,4 +37,8 @@
 - (void)addDialogWithImage:(UIImage *)image withText:(NSString *)text {
 	[_dialog setText:text];
 }
+- (IBAction)tappedDialogView:(id)sender {
+	[_coverPhoto setHidden:![_coverPhoto isHidden]];
+	DLog(@"tapped dialog view");
+}
 @end
